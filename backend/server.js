@@ -22,6 +22,11 @@ const productRoutes = require('./routes/products');
 const cartRoutes = require('./routes/cart');
 const uploadRoutes = require('./routes/upload');
 
+
+// Add this with other routes
+const passkeyRoutes = require('./routes/passkey');
+app.use('/api/passkey', passkeyRoutes);
+
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/cart', cartRoutes);
